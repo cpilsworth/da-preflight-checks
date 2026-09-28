@@ -7,7 +7,7 @@
  * checks work against saved source regardless of how it was authored.
  */
 
-import { TEMPLATE_METADATA_KEY, NO_TEMPLATE } from './rules.js';
+import { TEMPLATE_METADATA_KEY, NO_TEMPLATE } from './constants.js';
 
 /** Normalise a block/variant name the way EDS does (lowercase, dash-joined). */
 export function toClassName(name) {

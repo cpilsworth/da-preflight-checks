@@ -1,0 +1,35 @@
+{
+  "video-page": [
+    {
+      "type": "block-present",
+      "name": "embed",
+      "min": 1,
+      "severity": "error",
+      "title": "Embed block required",
+      "description": "A video page must contain at least one Embed block to host its video.",
+      "hint": "Add an Embed block and give it the video URL (YouTube, Vimeo, or a fragment path)."
+    }
+  ],
+  "campaign-page": [
+    {
+      "type": "block-present",
+      "name": "embed",
+      "min": 1,
+      "max": 1,
+      "severity": "error",
+      "title": "Exactly one Embed block required",
+      "description": "A campaign page must contain exactly one Embed block.",
+      "hint": "Add an Embed block, or remove the extras so only a single Embed remains."
+    }
+  ],
+  "print-page": [
+    {
+      "type": "block-absent",
+      "name": "embed",
+      "severity": "warning",
+      "title": "Embed block not supported",
+      "description": "Embedded media does not render on a print page and will be dropped.",
+      "hint": "Remove the Embed block, or switch the page to a template that supports media."
+    }
+  ]
+}
