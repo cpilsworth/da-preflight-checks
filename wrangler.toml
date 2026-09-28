@@ -1,0 +1,19 @@
+name = "da-preflight-checks"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# nodejs_compat lets linkedom's few Node-shaped imports resolve in the Worker.
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[vars]
+# Optional defaults so callers can omit org/site. Override per environment.
+# DEFAULT_ORG = "cpilsworth"
+# DEFAULT_SITE = "one-azn-demo"
+MAX_PAGES = "50"
+
+# Secrets are NOT set here - use `wrangler secret put <NAME>`:
+#   API_KEY   require callers to send a matching x-api-key header
+#   DA_TOKEN  IMS token, only needed when the DA site's source is not public

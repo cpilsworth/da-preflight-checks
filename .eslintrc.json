@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "extends": ["airbnb-base"],
+  "env": { "browser": true, "es2022": true },
+  "parserOptions": { "ecmaVersion": 2022, "sourceType": "module" },
+  "rules": {
+    "import/extensions": ["error", { "js": "always", "mjs": "always" }],
+    "import/no-unresolved": ["error", { "ignore": ["^https?://", "^linkedom"] }],
+    "import/prefer-default-export": "off",
+    "linebreak-style": ["error", "unix"],
+    "no-param-reassign": [2, { "props": false }]
+  },
+  "overrides": [
+    {
+      "files": ["test/**/*.mjs"],
+      "env": { "node": true }
+    },
+    {
+      "files": ["src/**/*.js"],
+      "globals": { "Response": "readonly", "Request": "readonly", "fetch": "readonly" }
+    }
+  ]
+}
